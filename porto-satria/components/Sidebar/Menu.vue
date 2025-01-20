@@ -1,19 +1,19 @@
 <template lang="">
-    <div >
+    <div class="">
         <header class="flex items-center gap-2 p-4 ">
             <div class="flex items-center gap-2 hover:scale-[105%] transition cursor-pointer"> 
                 <Logo/>
-                <p class="font-bold">Daspor</p>
+                <p class="font-bold text-black">Satria CMS</p>
             </div>
 
         </header>
         <div class="px-4 grow">
             <div class="grid gap-4">
-                <div v-for='(item, index) in items' :key='index' 
+                <NuxtLink :href="item.path" v-for='(item, index) in items' :key='index' 
                 class="flex items-center gap-2 px-3 py-1 hover:bg-neutral-100 rounded-lg transition cursor-pointer">
                 <Icon :name="item.icon" color="black" size="20" />
                     <span class="material-icons">{{ item.title }}</span>
-                </div>            
+                </NuxtLink>            
             </div>
         </div>  
     </div>
@@ -23,12 +23,12 @@ const items =ref([
 {
         title: 'Dashboard',
         icon: 'ic:outline-dashboard',
-        path: '/dashboard'
+        path: '/'
     },
     {
         title: 'Header',
         icon: 'mdi:head-cog-outline',
-        path: '/header'
+        path: '/myheader'
     },
     {
         title: 'About Me',

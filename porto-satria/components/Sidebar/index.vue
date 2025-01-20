@@ -1,5 +1,5 @@
 <template lang="">
-    <div>
+    <div class="">
         <div class="z-50 flex lg:hidden bg-green-500 items-center justify-between p-4 w-full h-full">
             <Logo/>
             <Icon class="z-50 cursor-pointer left-2 top-2" 
